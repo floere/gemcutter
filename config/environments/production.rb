@@ -9,3 +9,6 @@ Gemcutter::Application.configure do
 end
 
 require Rails.root.join("config", "secret") if Rails.root.join("config", "secret.rb").file?
+
+FullGems = Picky::Client::Full.new :host => 'gemsearch-server.heroku.com', :port => 80, :path => '/gems/full'
+LiveGems = Picky::Client::Live.new :host => 'gemsearch-server.heroku.com', :port => 80, :path => '/gems/live'

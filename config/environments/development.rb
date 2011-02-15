@@ -8,3 +8,9 @@ Gemcutter::Application.configure do
   config.active_support.deprecation = :log
   config.action_mailer.raise_delivery_errors = false
 end
+
+
+# Currently, we use the same search as in production.
+#
+FullGems = Picky::Client::Full.new :host => 'gemsearch-server.heroku.com', :port => 80, :path => '/gems/full'
+LiveGems = Picky::Client::Live.new :host => 'gemsearch-server.heroku.com', :port => 80, :path => '/gems/live'

@@ -19,6 +19,7 @@ gem "sinatra",           "1.0"
 gem "system_timer",      "1.0"
 gem "will_paginate",     "3.0.pre2"
 gem "xml-simple",        "1.0.12"
+gem "picky-client",      "1.3.2"
 
 # These gems suck and do stupid things when in maintenance mode
 group :development, :test, :staging, :production do
